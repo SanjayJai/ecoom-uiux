@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Shopping Bag — NOVARA</title>
+  <meta name="description" content="Review your selected items, apply promotional codes, and proceed to secure checkout with NOVARA.">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◈</text></svg>">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <aside class="announcement-bar" role="region" aria-label="Store Announcements">
+    <div class="container">
+      <div class="announcement-track">
+        <span class="announcement-item">
+          Complimentary express shipping across India on orders over <strong>₹1,999</strong>
+        </span>
+      </div>
+      <button class="announcement-close" aria-label="Close Announcement Bar">&times;</button>
+    </div>
+  </aside>
+
+  <!-- Navigation Header -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <a href="index.html" class="site-logo">
+        <span class="logo-text">NOVARA<span class="logo-dot"></span></span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="shop.html" class="nav-link">Shop</a>
+        <a href="shop.html?category=new-arrivals" class="nav-link">New Arrivals</a>
+        <a href="shop.html?category=bestsellers" class="nav-link">Collections</a>
+        <a href="about.html" class="nav-link">About</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="action-btn search-trigger-btn" aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+          </svg>
+        </button>
+
+        <a href="wishlist.html" class="action-btn" aria-label="Wishlist">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+          </svg>
+          <span class="badge-count wishlist-count-badge">0</span>
+        </a>
+
+        <a href="cart.html" class="action-btn" aria-label="Shopping Bag">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="badge-count cart-count-badge">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container section-top-space" style="padding-bottom: 5rem;">
+      <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+        <ol class="breadcrumb-list">
+          <li><a href="index.html">Home</a></li>
+          <li class="breadcrumb-separator">/</li>
+          <li class="breadcrumb-current">Shopping Bag</li>
+        </ol>
+      </nav>
+
+      <div style="margin-bottom: 2.5rem;">
+        <span class="section-eyebrow">Your Selection</span>
+        <h1 class="heading-editorial">Shopping Bag <span id="cart-page-header-count" style="font-size: 1.4rem; color: var(--color-muted);">(0)</span></h1>
+      </div>
+
+      <!-- Free Shipping Tracker -->
+      <div class="free-shipping-container" style="border-radius: var(--radius-sm); margin-bottom: 2rem;">
+        <div class="free-shipping-text" id="cart-page-shipping-text">
+          Calculating shipping allowance...
+        </div>
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" id="cart-page-shipping-fill"></div>
+        </div>
+      </div>
+
+      <!-- Main Cart Layout -->
+      <div id="cart-content-wrapper">
+        <!-- Rendered dynamically by script below -->
+      </div>
+    </div>
+  </main>
+
+  <!-- Checkout Demo Modal -->
+  <div class="modal-overlay" id="checkout-modal" aria-hidden="true">
+    <div class="modal-dialog" style="max-width: 540px; padding: 2.5rem;">
+      <button class="modal-close-btn" id="checkout-modal-close" aria-label="Close modal">&times;</button>
+      <div style="text-align: center; margin-bottom: 1.5rem;">
+        <div style="width: 56px; height: 56px; border-radius: 50%; background-color: var(--color-warm-beige); color: var(--color-accent); display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/>
+          </svg>
+        </div>
+        <span class="section-eyebrow">Order Dispatch</span>
+        <h3 class="heading-editorial">Production Gateway Integration</h3>
+        <p style="font-size: 0.88rem; color: var(--color-mid-gray); line-height: 1.6; margin-top: 0.5rem;">
+          In a live commercial deployment, clicking <strong>Proceed to Payment</strong> securely transitions the bag to an authenticated server-side API (e.g., Razorpay, Stripe, or Cashfree) with tamper-proof signature verification and encrypted webhooks.
+        </p>
+      </div>
+
+      <div style="background-color: var(--color-warm-beige); border: 1px solid var(--color-border); border-radius: var(--radius-sm); padding: 1.2rem; font-size: 0.82rem; color: var(--color-dark-gray); line-height: 1.6;">
+        <strong>Security &amp; Architecture Checklist:</strong>
+        <ul style="list-style: disc; padding-left: 1.2rem; margin-top: 0.4rem;">
+          <li>Prices &amp; discounts verified on the server to prevent DOM tampering.</li>
+          <li>Inventory reserved in database before final authorization.</li>
+          <li>Zero credit card data stored locally in browser localStorage.</li>
+        </ul>
+      </div>
+
+      <div style="margin-top: 1.5rem; display: flex; gap: 0.8rem;">
+        <button class="btn btn-primary btn-full" onclick="NovaraApp.showToast('Order Placed (Demo)', 'Thank you! Sample order confirmed in prototype mode.', 'bag'); NovaraCart.clearCart(); document.getElementById('checkout-modal').classList.remove('is-active'); renderCartPage();">
+          Complete Demo Order
+        </button>
+        <button class="btn btn-secondary btn-full" onclick="document.getElementById('checkout-modal').classList.remove('is-active');">
+          Return to Bag
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search Overlay -->
+  <div class="drawer-backdrop" id="search-backdrop" aria-hidden="true"></div>
+  <div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true">
+    <div class="container search-container">
+      <div class="search-input-wrapper">
+        <input type="text" id="search-input" class="search-input" placeholder="Search the collection...">
+        <button class="search-clear-btn" id="search-clear">&times;</button>
+        <button class="search-close-btn" id="search-close">&times;</button>
+      </div>
+      <div class="search-meta">
+        <div id="search-results-count"></div>
+        <div class="search-results-list" id="search-results"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Nav Drawer -->
+  <div class="drawer-backdrop" id="mobile-nav-backdrop" aria-hidden="true"></div>
+  <aside class="mobile-nav-drawer" id="mobile-nav-drawer">
+    <div class="mobile-nav-header">
+      <span class="logo-text">NOVARA<span class="logo-dot"></span></span>
+      <button class="close-drawer-btn mobile-nav-close">&times;</button>
+    </div>
+    <div class="mobile-nav-body">
+      <div class="mobile-nav-links">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+        <a href="shop.html" class="mobile-nav-link">Shop</a>
+        <a href="shop.html?category=new-arrivals" class="mobile-nav-link">New Arrivals</a>
+        <a href="wishlist.html" class="mobile-nav-link">Wishlist</a>
+        <a href="cart.html" class="mobile-nav-link">Shopping Bag</a>
+        <a href="about.html" class="mobile-nav-link">About</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 NOVARA Lifestyle Pvt. Ltd. All rights reserved.</p>
+        <button class="back-to-top-btn">Back to Top ↑</button>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast-container" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/wishlist.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/app.js"></script>
+
+  <!-- Dedicated Cart Page Controller -->
+  <script>
+    function renderCartPage() {
+      const container = document.getElementById("cart-content-wrapper");
+      const headerCount = document.getElementById("cart-page-header-count");
+      const shippingText = document.getElementById("cart-page-shipping-text");
+      const shippingFill = document.getElementById("cart-page-shipping-fill");
+
+      if (!container || typeof NovaraCart === "undefined") return;
+
+      const items = NovaraCart.getItems();
+      const count = NovaraCart.getItemCount();
+      const subtotal = NovaraCart.getSubtotal();
+      const shipping = NovaraCart.getShipping();
+      const discount = NovaraCart.getDiscount();
+      const total = NovaraCart.getTotal();
+      const activeCoupon = NovaraCart.getActiveCoupon();
+      const progress = NovaraCart.getFreeShippingProgress();
+
+      if (headerCount) headerCount.textContent = `(${count})`;
+
+      // Free shipping bar
+      if (shippingText && shippingFill) {
+        if (subtotal === 0) {
+          shippingText.innerHTML = `Add items to enjoy <strong>Complimentary Express Shipping</strong> on orders above ₹1,999`;
+          shippingFill.style.width = "0%";
+        } else if (progress.isQualified) {
+          shippingText.innerHTML = `🎉 <strong>Congratulations!</strong> You have qualified for Complimentary Express Courier across India!`;
+          shippingFill.style.width = "100%";
+        } else {
+          shippingText.innerHTML = `Add <strong>₹${progress.remaining.toLocaleString("en-IN")}</strong> more to unlock <strong>Complimentary Shipping</strong>`;
+          shippingFill.style.width = `${progress.percent}%`;
+        }
+      }
+
+      // Empty State
+      if (items.length === 0) {
+        container.innerHTML = `
+          <div class="empty-state" style="padding: 5rem 1rem;">
+            <div class="empty-state-icon" style="width: 80px; height: 80px;">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/>
+              </svg>
+            </div>
+            <h2 class="empty-state-title heading-editorial">Your Shopping Bag is Empty</h2>
+            <p class="empty-state-text">Explore our collection of pure silk, extrafine Italian merino wool, and Tuscan leather craftsmanship.</p>
+            <a href="shop.html" class="btn btn-primary btn-lg" style="margin-top: 0.5rem;">Explore The Collections</a>
+          </div>
+        `;
+        return;
+      }
+
+      // Populate Items & Order Summary
+      let itemsRowsHtml = "";
+      items.forEach((item) => {
+        const lineTotal = item.price * item.quantity;
+        itemsRowsHtml += `
+          <div class="cart-row">
+            <div class="cart-product-cell">
+              <a href="product.html?id=${item.id}">
+                <img src="${item.image}" alt="${item.name}" class="cart-product-thumb" loading="lazy">
+              </a>
+              <div class="cart-product-meta">
+                <span style="font-size: 0.72rem; text-transform: uppercase; color: var(--color-muted);">${item.category}</span>
+                <h5><a href="product.html?id=${item.id}">${item.name}</a></h5>
+                <p>Size: <strong>${item.size}</strong> &bull; Color: <strong>${item.color}</strong></p>
+              </div>
+            </div>
+
+            <div style="font-weight: 600; font-size: 0.95rem;">
+              ₹${item.price.toLocaleString("en-IN")}
+            </div>
+
+            <div>
+              <div class="qty-stepper">
+                <button class="qty-btn" onclick="NovaraCart.updateQuantity('${item.key}', ${item.quantity - 1}); renderCartPage();">−</button>
+                <span class="qty-value">${item.quantity}</span>
+                <button class="qty-btn" onclick="NovaraCart.updateQuantity('${item.key}', ${item.quantity + 1}); renderCartPage();">+</button>
+              </div>
+            </div>
+
+            <div style="font-weight: 700; font-size: 1.05rem; color: var(--color-black);">
+              ₹${lineTotal.toLocaleString("en-IN")}
+            </div>
+
+            <div>
+              <button class="cart-item-remove" onclick="NovaraCart.removeItem('${item.key}'); renderCartPage();" title="Remove Item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        `;
+      });
+
+      const couponSectionHtml = activeCoupon
+        ? `
+          <div class="active-coupon-tag">
+            <span>Coupon applied: <strong>${activeCoupon.code}</strong> (${activeCoupon.label})</span>
+            <button onclick="NovaraCart.removeCoupon(); renderCartPage();" style="color: var(--color-danger); cursor: pointer; padding: 2px 6px;">&times;</button>
+          </div>
+        `
+        : `
+          <form onsubmit="event.preventDefault(); applyCouponFromInput();" class="coupon-box">
+            <input type="text" id="coupon-field" class="coupon-input" placeholder="Coupon Code (e.g. NOVARA10)">
+            <button type="submit" class="btn btn-secondary btn-sm">Apply</button>
+          </form>
+          <div style="font-size: 0.75rem; color: var(--color-muted);">
+            Available: <strong>NOVARA10</strong> (10% off) | <strong>FIRST500</strong> (₹500 off on ₹2,500+)
+          </div>
+        `;
+
+      container.innerHTML = `
+        <div class="cart-page-grid">
+          <!-- Left: Table of items -->
+          <div class="cart-table-card">
+            <div class="cart-table-header">
+              <span>Item Description</span>
+              <span>Unit Price</span>
+              <span>Quantity</span>
+              <span>Line Total</span>
+              <span></span>
+            </div>
+            ${itemsRowsHtml}
+
+            <div style="margin-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+              <a href="shop.html" class="btn btn-secondary btn-sm">
+                ← Continue Shopping
+              </a>
+              <button class="btn btn-secondary btn-sm" onclick="if(confirm('Are you sure you wish to clear your entire bag?')){ NovaraCart.clearCart(); renderCartPage(); }">
+                Clear Shopping Bag
+              </button>
+            </div>
+          </div>
+
+          <!-- Right: Summary Card -->
+          <div class="cart-summary-card">
+            <h3 class="cart-summary-title heading-editorial">Order Summary</h3>
+
+            <div class="cart-summary-row">
+              <span>Subtotal (${count} items)</span>
+              <span>₹${subtotal.toLocaleString("en-IN")}</span>
+            </div>
+
+            ${discount > 0 ? `
+              <div class="cart-summary-row" style="color: var(--color-success); font-weight: 600;">
+                <span>Promotional Privilege</span>
+                <span>-₹${discount.toLocaleString("en-IN")}</span>
+              </div>
+            ` : ""}
+
+            <div class="cart-summary-row">
+              <span>Standard Express Delivery</span>
+              <span>${shipping === 0 ? '<strong style="color: var(--color-success);">Complimentary</strong>' : '₹' + shipping.toLocaleString("en-IN")}</span>
+            </div>
+
+            <div class="cart-summary-row" style="font-size: 0.8rem; color: var(--color-muted);">
+              <span>Estimated Tax (12% GST)</span>
+              <span>Included in price</span>
+            </div>
+
+            <!-- Coupon Input -->
+            <div style="border-top: 1px dashed var(--color-border); padding-top: 0.8rem;">
+              ${couponSectionHtml}
+            </div>
+
+            <!-- Final Grand Total -->
+            <div class="cart-summary-row total-row">
+              <span>Grand Total</span>
+              <span style="font-size: 1.35rem; color: var(--color-black);">₹${total.toLocaleString("en-IN")}</span>
+            </div>
+
+            <button class="btn btn-primary btn-lg btn-full" id="proceed-checkout-btn" style="margin-top: 0.5rem;">
+              Proceed to Secure Checkout
+            </button>
+
+            <!-- Trust Badges -->
+            <div style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.78rem; color: var(--color-muted); margin-top: 0.5rem;">
+              <div style="display: flex; align-items: center; gap: 0.5rem;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                <span>Bank-grade 256-bit TLS encrypted checkout</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.5rem;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
+                <span>100% Certified noble Italian fibers</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+
+      // Bind checkout button
+      const checkoutBtn = document.getElementById("proceed-checkout-btn");
+      const checkoutModal = document.getElementById("checkout-modal");
+      if (checkoutBtn && checkoutModal) {
+        checkoutBtn.addEventListener("click", () => {
+          checkoutModal.classList.add("is-active");
+        });
+      }
+    }
+
+    function applyCouponFromInput() {
+      const field = document.getElementById("coupon-field");
+      if (!field) return;
+      const res = NovaraCart.applyCoupon(field.value);
+      if (res.success) {
+        NovaraApp.showToast("Coupon Applied", res.message, "check");
+      } else {
+        NovaraApp.showToast("Coupon Error", res.message, "info");
+      }
+      renderCartPage();
+    }
+
+    // Modal listeners
+    document.addEventListener("DOMContentLoaded", function () {
+      renderCartPage();
+
+      const modal = document.getElementById("checkout-modal");
+      const closeBtn = document.getElementById("checkout-modal-close");
+      if (closeBtn && modal) {
+        closeBtn.addEventListener("click", () => modal.classList.remove("is-active"));
+      }
+      if (modal) {
+        modal.addEventListener("click", (e) => {
+          if (e.target === modal) modal.classList.remove("is-active");
+        });
+      }
+    });
+
+    // Re-render if cart changes via drawer or another tab
+    window.addEventListener("novara:cart-updated", renderCartPage);
+  </script>
+</body>
+</html>

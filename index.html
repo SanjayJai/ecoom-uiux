@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>NOVARA — Luxury Essentials &amp; Modern Lifestyle</title>
+  <meta name="description" content="Discover NOVARA: modern, minimal lifestyle apparel, luxury cashmere, silk draping, and Italian leather goods tailored for everyday excellence.">
+  <meta name="keywords" content="NOVARA, luxury fashion, minimalist clothing, merino wool, cashmere, leather bags, Indian rupees fashion">
+  <meta name="author" content="NOVARA Atelier">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="NOVARA — Luxury Essentials & Modern Lifestyle">
+  <meta property="og:description" content="Minimalist, sophisticated apparel and accessories designed for everyday excellence.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Favicon placeholder SVG -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◈</text></svg>">
+</head>
+<body>
+
+  <!-- ========================================================================
+       A. ANNOUNCEMENT BAR
+       ======================================================================== -->
+  <aside class="announcement-bar" role="region" aria-label="Store Announcements">
+    <div class="container">
+      <div class="announcement-track">
+        <span class="announcement-item">
+          Free express shipping across India on orders over <strong>₹1,999</strong>
+        </span>
+      </div>
+      <button class="announcement-close" aria-label="Close Announcement Bar">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 6 6 18M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       B. PREMIUM NAVIGATION HEADER
+       ======================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <!-- Mobile Hamburger Toggle -->
+      <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav-drawer">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Brand Logo -->
+      <a href="index.html" class="site-logo" aria-label="NOVARA Homepage">
+        <span class="logo-text">NOVARA<span class="logo-dot"></span></span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link is-active">Home</a>
+        <a href="shop.html" class="nav-link">Shop</a>
+        <a href="shop.html?category=new-arrivals" class="nav-link">New Arrivals <span class="nav-tag-badge">NEW</span></a>
+        <a href="shop.html?category=bestsellers" class="nav-link">Collections</a>
+        <a href="about.html" class="nav-link">About</a>
+      </nav>
+
+      <!-- Header Action Icons -->
+      <div class="header-actions">
+        <!-- Search Trigger -->
+        <button class="action-btn search-trigger-btn" aria-label="Search products" title="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+          </svg>
+        </button>
+
+        <!-- Account Modal Trigger -->
+        <button class="action-btn" id="account-btn" aria-label="User Account" title="My Account">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+          </svg>
+        </button>
+
+        <!-- Wishlist Link -->
+        <a href="wishlist.html" class="action-btn" aria-label="Wishlist" title="View Wishlist">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+          </svg>
+          <span class="badge-count wishlist-count-badge">0</span>
+        </a>
+
+        <!-- Shopping Cart Trigger -->
+        <button class="action-btn cart-trigger-btn" aria-label="Shopping Cart" title="View Bag">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="badge-count cart-count-badge">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================================================================
+         C. HERO SECTION
+         ====================================================================== -->
+    <section class="hero-section" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <span class="hero-tag">Autumn / Winter Atelier 2026</span>
+            <h1 class="hero-headline" id="hero-title">
+              Elevate Your
+              <em>Everyday.</em>
+            </h1>
+            <p class="hero-description">
+              Meticulously engineered essentials crafted with certified Italian merino wool, pure mulberry silk, and Tuscan vegetable-tanned leather. Designed to transcend seasons.
+            </p>
+
+            <div class="hero-ctas">
+              <a href="shop.html" class="btn btn-primary btn-lg">
+                <span>Shop Collection</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
+              <a href="shop.html?category=new-arrivals" class="btn btn-secondary btn-lg">
+                Explore New Arrivals
+              </a>
+            </div>
+
+            <div class="hero-features">
+              <div class="hero-feature-item">
+                <span class="hero-feature-num">100%</span>
+                <span class="hero-feature-label">Ethical Sourcing</span>
+              </div>
+              <div class="hero-feature-item">
+                <span class="hero-feature-num">280gsm</span>
+                <span class="hero-feature-label">Italian Wool</span>
+              </div>
+              <div class="hero-feature-item">
+                <span class="hero-feature-num">Zero</span>
+                <span class="hero-feature-label">Plastic Packaging</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-media-wrapper">
+            <div class="hero-media-card">
+              <img
+                src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1000&q=80"
+                alt="Editorial model wearing NOVARA luxury tailored jacket and silk garments"
+                class="hero-image"
+                loading="eager"
+              >
+            </div>
+
+            <!-- Floating luxury badge -->
+            <div class="hero-floating-card">
+              <div class="floating-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                </svg>
+              </div>
+              <div class="floating-text">
+                <h5>Complimentary Shipping</h5>
+                <p>On all domestic orders over ₹1,999</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         D. CATEGORY COLLECTION
+         ====================================================================== -->
+    <section class="section" aria-labelledby="categories-heading">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-eyebrow">Curated Lines</span>
+          <h2 id="categories-heading" class="heading-editorial">Shop by Category</h2>
+          <p class="section-subtitle">Discover purposeful silhouettes designed with balanced geometry, rich textures, and timeless appeal.</p>
+        </div>
+
+        <div class="categories-grid">
+          <!-- Men -->
+          <a href="shop.html?category=men" class="category-card" aria-label="Shop Men's Collection">
+            <img
+              src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80"
+              alt="Men's collection tailored blazer"
+              class="category-img"
+              loading="lazy"
+            >
+            <div class="category-overlay">
+              <h3 class="category-title">Men</h3>
+              <p class="category-desc">Tailored coats, merino knitwear &amp; relaxed trousers</p>
+              <span class="category-link">
+                Shop Men
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </span>
+            </div>
+          </a>
+
+          <!-- Women -->
+          <a href="shop.html?category=women" class="category-card" aria-label="Shop Women's Collection">
+            <img
+              src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=800&q=80"
+              alt="Women's collection silk shirt"
+              class="category-img"
+              loading="lazy"
+            >
+            <div class="category-overlay">
+              <h3 class="category-title">Women</h3>
+              <p class="category-desc">Fluid silk separates, drape dresses &amp; cashmere</p>
+              <span class="category-link">
+                Shop Women
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </span>
+            </div>
+          </a>
+
+          <!-- Accessories -->
+          <a href="shop.html?category=accessories" class="category-card" aria-label="Shop Accessories Collection">
+            <img
+              src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=800&q=80"
+              alt="Handcrafted leather tote"
+              class="category-img"
+              loading="lazy"
+            >
+            <div class="category-overlay">
+              <h3 class="category-title">Accessories</h3>
+              <p class="category-desc">Full-grain leather totes, brass cuffs &amp; eyewear</p>
+              <span class="category-link">
+                Shop Accessories
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </span>
+            </div>
+          </a>
+
+          <!-- New Arrivals -->
+          <a href="shop.html?category=new-arrivals" class="category-card" aria-label="Shop New Arrivals">
+            <img
+              src="https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=800&q=80"
+              alt="New seasonal arrivals trench coat"
+              class="category-img"
+              loading="lazy"
+            >
+            <div class="category-overlay">
+              <h3 class="category-title">New Arrivals</h3>
+              <p class="category-desc">Freshly unveiled architectural pieces for the season</p>
+              <span class="category-link">
+                View Arrivals
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         E & F. FEATURED PRODUCTS (WITH FILTER TABS)
+         ====================================================================== -->
+    <section class="section" id="featured-products-section" aria-labelledby="featured-heading">
+      <div class="container">
+        <div class="flex-between" style="flex-wrap: wrap; gap: 1.5rem; margin-bottom: 2.5rem;">
+          <div>
+            <span class="section-eyebrow">Signature Pieces</span>
+            <h2 id="featured-heading" class="heading-editorial">Featured Collection</h2>
+          </div>
+
+          <!-- Quick category tabs -->
+          <div class="shop-categories-nav" id="home-category-tabs" role="tablist" aria-label="Filter featured products">
+            <button class="category-filter-btn is-active" data-cat="all" role="tab" aria-selected="true">All Pieces</button>
+            <button class="category-filter-btn" data-cat="men" role="tab" aria-selected="false">Men</button>
+            <button class="category-filter-btn" data-cat="women" role="tab" aria-selected="false">Women</button>
+            <button class="category-filter-btn" data-cat="accessories" role="tab" aria-selected="false">Accessories</button>
+          </div>
+        </div>
+
+        <!-- Dynamic Product Grid rendered by JavaScript with fallback -->
+        <div class="product-grid" id="home-featured-grid">
+          <!-- Populated dynamically by home-init script below -->
+        </div>
+
+        <div style="text-align: center; margin-top: 3.5rem;">
+          <a href="shop.html" class="btn btn-secondary btn-lg">
+            <span>View All Products</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         G. PROMOTIONAL EDITORIAL BANNER
+         ====================================================================== -->
+    <section class="promo-banner" aria-labelledby="promo-banner-title">
+      <img
+        src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1600&q=80"
+        alt="Autumn Winter Campaign Landscape"
+        class="promo-bg"
+        loading="lazy"
+      >
+      <div class="container">
+        <div class="promo-content">
+          <span class="promo-eyebrow">The Winter Capsule</span>
+          <h2 class="promo-title heading-editorial" id="promo-banner-title">
+            The Mongolian Cashmere &amp; Silk Edit
+          </h2>
+          <p class="promo-desc">
+            An exploration of pure tactile indulgence. Sourced directly from pastoral herds in Inner Mongolia and spun into gossamer-soft knitwear that embraces you in thermal perfection.
+          </p>
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="shop.html?category=women" class="btn btn-white btn-lg">Shop The Capsule</a>
+            <a href="about.html" class="btn btn-outline-white btn-lg">Our Fiber Heritage</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         H. BESTSELLERS / TRENDING COLLECTION
+         ====================================================================== -->
+    <section class="section" aria-labelledby="bestsellers-heading">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-eyebrow">Most Coveted</span>
+          <h2 id="bestsellers-heading" class="heading-editorial">Trending Bestsellers</h2>
+          <p class="section-subtitle">The perennial client favorites, worn by discerning tastemakers worldwide.</p>
+        </div>
+
+        <div class="product-grid" id="home-bestsellers-grid">
+          <!-- Populated by products.js and app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         I. BRAND STORY
+         ====================================================================== -->
+    <section class="section" style="background-color: var(--color-surface); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);" aria-labelledby="brand-story-title">
+      <div class="container">
+        <div class="brand-story-grid">
+          <div class="brand-story-media">
+            <img
+              src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1000&q=80"
+              alt="Artisan sewing bespoke garments in atelier"
+              class="brand-story-img-main"
+              loading="lazy"
+            >
+            <div class="brand-story-accent-box">
+              <h4 class="heading-editorial">Artisanal Integrity</h4>
+              <p>Every single garment passes through 24 precise quality checkpoints before earning its numbered hallmark.</p>
+            </div>
+          </div>
+
+          <div class="brand-story-content">
+            <span class="section-eyebrow">Our Philosophy</span>
+            <h2 id="brand-story-title" class="heading-editorial">Designed for Everyday Excellence</h2>
+            <p class="brand-story-text">
+              NOVARA was established in 2024 to oppose the ephemeral cycle of fast fashion. We hold that true luxury is not defined by ostentation, but by quiet confidence, extraordinary textiles, and honest craftsmanship.
+            </p>
+            <p class="brand-story-text">
+              By collaborating directly with multi-generational family mills in Biella, Florence, and Tamil Nadu, we remove intermediary markups to deliver runway-grade tailoring at honest valuations.
+            </p>
+
+            <div class="brand-pillars">
+              <div class="pillar-item">
+                <h5>Traceable Fibers</h5>
+                <p>100% GOTS certified organic cotton and mulesing-free wool.</p>
+              </div>
+              <div class="pillar-item">
+                <h5>Zero Deadstock</h5>
+                <p>Produced in numbered micro-batches to eliminate waste.</p>
+              </div>
+              <div class="pillar-item">
+                <h5>Architectural Cuts</h5>
+                <p>Proportioned to flatter movement with effortless ease.</p>
+              </div>
+              <div class="pillar-item">
+                <h5>Fair Atelier Labor</h5>
+                <p>Guaranteed living wages and safe craftsmanship studios.</p>
+              </div>
+            </div>
+
+            <div style="margin-top: 1rem;">
+              <a href="about.html" class="btn btn-secondary">
+                <span>Read Full Story</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         J. CUSTOMER REVIEWS
+         ====================================================================== -->
+    <section class="section" aria-labelledby="reviews-heading">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-eyebrow">Client Reflections</span>
+          <h2 id="reviews-heading" class="heading-editorial">Words from Discerning Patrons</h2>
+          <p class="section-subtitle">Real feedback from clients wearing NOVARA across Mumbai, Delhi, London, and Tokyo.</p>
+        </div>
+
+        <div class="reviews-grid">
+          <!-- Review 1 -->
+          <div class="review-card">
+            <div class="review-rating-stars" aria-label="5 out of 5 stars">
+              ★★★★★
+            </div>
+            <p class="review-text">
+              “The Architectural Merino Blazer has completely transformed my travel wardrobe. The drape is effortless, the shoulders are soft yet structured, and it doesn't wrinkle even after an 8-hour flight.”
+            </p>
+            <div class="review-author">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Ananya S." class="author-avatar" loading="lazy">
+              <div class="author-info">
+                <h5>Ananya Singhania</h5>
+                <p>Verified Buyer • Architectural Merino Wool Blazer</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="review-card">
+            <div class="review-rating-stars" aria-label="5 out of 5 stars">
+              ★★★★★
+            </div>
+            <p class="review-text">
+              “The vegetable-tanned leather tote feels like an archival heirloom. The brass fixtures have a subtle satin finish and it comfortably houses my 16" laptop without losing its sleek silhouette.”
+            </p>
+            <div class="review-author">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="Kabir M." class="author-avatar" loading="lazy">
+              <div class="author-info">
+                <h5>Kabir Mehta</h5>
+                <p>Verified Buyer • Full-Grain Italian Leather Tote</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="review-card">
+            <div class="review-rating-stars" aria-label="5 out of 5 stars">
+              ★★★★★
+            </div>
+            <p class="review-text">
+              “I was hesitant about ordering silk online, but the 22-momme weight of the Mulberry Silk Drape Shirt is extraordinary. Thick, matte, and liquid-smooth. Packaging was 100% compostable and luxurious.”
+            </p>
+            <div class="review-author">
+              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=120&q=80" alt="Rhea D." class="author-avatar" loading="lazy">
+              <div class="author-info">
+                <h5>Rhea Deora</h5>
+                <p>Verified Buyer • Mulberry Silk Drape Shirt</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         K. NEWSLETTER SUBSCRIPTION
+         ====================================================================== -->
+    <section class="section newsletter-section" aria-labelledby="newsletter-heading">
+      <div class="container">
+        <div class="newsletter-box">
+          <span class="section-eyebrow">Private Circle</span>
+          <h2 id="newsletter-heading" class="heading-editorial">Join The NOVARA Gazette</h2>
+          <p class="section-subtitle">
+            Receive private capsule invitations, architectural editorial previews, and an exclusive 10% privilege on your first acquisition.
+          </p>
+
+          <form class="newsletter-form" novalidate>
+            <div class="newsletter-input-group">
+              <input
+                type="email"
+                class="newsletter-input"
+                placeholder="Enter your email address..."
+                aria-label="Email address for newsletter"
+                required
+              >
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </div>
+            <p class="newsletter-note">
+              *By subscribing you agree to receive digital dispatches. Production integration requires a mail service (SendGrid, Mailchimp, or Laravel Queues).
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       L. PREMIUM FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <!-- Brand Summary -->
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">NOVARA</a>
+          <p>
+            An independent atelier creating elevated lifestyle essentials through purposeful tailoring, noble natural fibers, and timeless minimalism.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://instagram.com" class="social-icon-btn" aria-label="Instagram" target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </a>
+            <a href="https://pinterest.com" class="social-icon-btn" aria-label="Pinterest" target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            </a>
+            <a href="https://twitter.com" class="social-icon-btn" aria-label="Twitter X" target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4l16 16m0-16L4 20"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Shop Column -->
+        <div class="footer-col">
+          <h5>Collections</h5>
+          <ul class="footer-links">
+            <li><a href="shop.html?category=men">Men's Apparel</a></li>
+            <li><a href="shop.html?category=women">Women's Apparel</a></li>
+            <li><a href="shop.html?category=accessories">Leather &amp; Accessories</a></li>
+            <li><a href="shop.html?category=new-arrivals">New Arrivals</a></li>
+            <li><a href="shop.html?category=bestsellers">Bestselling Classics</a></li>
+          </ul>
+        </div>
+
+        <!-- Support Column -->
+        <div class="footer-col">
+          <h5>Client Concierge</h5>
+          <ul class="footer-links">
+            <li><a href="cart.html">Track Order</a></li>
+            <li><a href="about.html#shipping">Shipping &amp; Delivery</a></li>
+            <li><a href="about.html#returns">Complimentary Returns</a></li>
+            <li><a href="about.html#sizing">Care &amp; Size Guide</a></li>
+            <li><a href="about.html#contact">Contact Atelier</a></li>
+          </ul>
+        </div>
+
+        <!-- Brand Column -->
+        <div class="footer-col">
+          <h5>The Atelier</h5>
+          <ul class="footer-links">
+            <li><a href="about.html">Our Design Philosophy</a></li>
+            <li><a href="about.html#materials">Sustainable Materials</a></li>
+            <li><a href="about.html#flagship">Flagship Locations</a></li>
+            <li><a href="about.html#careers">Careers</a></li>
+            <li><a href="about.html#privacy">Privacy &amp; Terms</a></li>
+          </ul>
+        </div>
+
+        <!-- Atelier Contact Details -->
+        <div class="footer-col">
+          <h5>Flagship Studio</h5>
+          <p style="color: #9c978f; font-size: 0.85rem; line-height: 1.6; margin-bottom: 0.8rem;">
+            14 Kala Ghoda Arts Quarter, Fort,<br>
+            Mumbai, Maharashtra 400001<br>
+            Mon – Sat: 11:00 AM – 8:00 PM
+          </p>
+          <a href="mailto:concierge@novaralifestyle.com" style="color: var(--color-accent-light); font-size: 0.85rem; font-weight: 600;">
+            concierge@novaralifestyle.com
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 NOVARA Lifestyle Pvt. Ltd. All rights reserved. Crafted for everyday excellence.</p>
+
+        <!-- Payment Badges -->
+        <div class="payment-methods" aria-label="Accepted Payment Gateways">
+          <span class="payment-badge">UPI</span>
+          <span class="payment-badge">RuPay</span>
+          <span class="payment-badge">Visa</span>
+          <span class="payment-badge">Mastercard</span>
+          <span class="payment-badge">Amex</span>
+          <span class="payment-badge">Apple Pay</span>
+        </div>
+
+        <button class="back-to-top-btn" aria-label="Scroll back to top">
+          Back to Top
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="m18 15-6-6-6 6"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       SHARED GLOBAL DRAWERS & MODALS
+       ======================================================================== -->
+
+  <!-- 1. Cart Slide-in Drawer -->
+  <div class="drawer-backdrop" id="cart-backdrop" aria-hidden="true"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping Bag Drawer" role="dialog" aria-modal="true">
+    <div class="cart-drawer-header">
+      <div class="cart-drawer-title">
+        <span>Shopping Bag</span>
+        <span class="cart-drawer-count" id="cart-drawer-count">(0 items)</span>
+      </div>
+      <button class="close-drawer-btn cart-drawer-close" aria-label="Close Shopping Bag">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 6 6 18M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Free Shipping Progress -->
+    <div class="free-shipping-container">
+      <div class="free-shipping-text" id="free-shipping-text">
+        Add <strong>₹1,999</strong> more for <strong>Free Express Shipping</strong>
+      </div>
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" id="free-shipping-fill"></div>
+      </div>
+    </div>
+
+    <!-- Scrollable Items List -->
+    <div class="cart-drawer-body" id="cart-drawer-items">
+      <!-- Injected by cart.js -->
+    </div>
+
+    <!-- Drawer Footer -->
+    <div class="cart-drawer-footer">
+      <div class="cart-summary-row">
+        <span>Subtotal</span>
+        <span id="cart-drawer-subtotal">₹0</span>
+      </div>
+      <div class="cart-summary-row total-row">
+        <span>Estimated Total</span>
+        <span id="cart-drawer-total">₹0</span>
+      </div>
+      <div class="cart-footer-links">
+        <a href="cart.html" class="btn btn-primary btn-full" id="cart-drawer-checkout-btn">
+          View Bag &amp; Checkout
+        </a>
+        <button class="btn btn-secondary btn-sm btn-full" onclick="NovaraCart.closeDrawer()">
+          Continue Shopping
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- 2. Search Overlay -->
+  <div class="drawer-backdrop" id="search-backdrop" aria-hidden="true"></div>
+  <div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true" aria-label="Live Search">
+    <div class="container search-container">
+      <div class="search-input-wrapper">
+        <input
+          type="text"
+          id="search-input"
+          class="search-input"
+          placeholder="Search collections, fabrics, jackets..."
+          autocomplete="off"
+          aria-label="Search items"
+        >
+        <button class="search-clear-btn" id="search-clear" aria-label="Clear Search Input">&times;</button>
+        <button class="search-close-btn" id="search-close" aria-label="Close Search">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 6 6 18M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="search-meta">
+        <div class="trending-tags">
+          <span>Trending searches:</span>
+          <button class="tag-pill" data-query="Merino Wool">Merino Wool</button>
+          <button class="tag-pill" data-query="Silk">Mulberry Silk</button>
+          <button class="tag-pill" data-query="Leather">Leather Tote</button>
+          <button class="tag-pill" data-query="Cashmere">Cashmere</button>
+          <button class="tag-pill" data-query="Trouser">Relaxed Trouser</button>
+        </div>
+
+        <div id="search-results-count" style="font-size: 0.85rem; color: var(--color-mid-gray);"></div>
+        <div class="search-results-list" id="search-results">
+          <!-- Populated by search.js -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Mobile Navigation Drawer -->
+  <div class="drawer-backdrop" id="mobile-nav-backdrop" aria-hidden="true"></div>
+  <aside class="mobile-nav-drawer" id="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <div class="mobile-nav-header">
+      <a href="index.html" class="site-logo">
+        <span class="logo-text">NOVARA<span class="logo-dot"></span></span>
+      </a>
+      <button class="close-drawer-btn mobile-nav-close" aria-label="Close menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 6 6 18M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="mobile-nav-body">
+      <div class="mobile-nav-links">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+        <a href="shop.html" class="mobile-nav-link">All Products</a>
+        <a href="shop.html?category=men" class="mobile-nav-link">Men</a>
+        <a href="shop.html?category=women" class="mobile-nav-link">Women</a>
+        <a href="shop.html?category=accessories" class="mobile-nav-link">Accessories</a>
+        <a href="shop.html?category=new-arrivals" class="mobile-nav-link">
+          New Arrivals <span class="nav-tag-badge">NEW</span>
+        </a>
+        <a href="wishlist.html" class="mobile-nav-link">Wishlist</a>
+        <a href="cart.html" class="mobile-nav-link">Shopping Bag</a>
+        <a href="about.html" class="mobile-nav-link">Our Atelier</a>
+      </div>
+    </div>
+
+    <div class="mobile-nav-footer">
+      <p style="font-size: 0.82rem; color: var(--color-mid-gray); margin: 0;">
+        Currency: <strong>INR (₹) India</strong>
+      </p>
+      <p style="font-size: 0.78rem; color: var(--color-muted); margin: 0;">
+        Complimentary express courier over ₹1,999.
+      </p>
+    </div>
+  </aside>
+
+  <!-- 4. Account Demo Modal -->
+  <div class="modal-overlay" id="account-modal" aria-hidden="true">
+    <div class="modal-dialog" style="max-width: 480px; padding: 2.2rem;">
+      <button class="modal-close-btn" id="account-modal-close" aria-label="Close">&times;</button>
+      <div style="text-align: center; margin-bottom: 1.5rem;">
+        <span class="section-eyebrow">Client Portal</span>
+        <h3 class="heading-editorial">Welcome to NOVARA</h3>
+        <p style="font-size: 0.85rem; color: var(--color-mid-gray); margin-top: 0.4rem;">
+          Access bespoke order history, saved sizing profiles, and priority capsule releases.
+        </p>
+      </div>
+
+      <form onsubmit="event.preventDefault(); NovaraApp.showToast('Authentication Note', 'User accounts & authentication require a secure backend (e.g. Laravel Sanctum / OAuth).', 'info'); document.getElementById('account-modal').classList.remove('is-active');" style="display: flex; flex-direction: column; gap: 1rem;">
+        <div>
+          <label style="font-size: 0.8rem; font-weight: 600; text-transform: uppercase;">Email Address</label>
+          <input type="email" required placeholder="patron@example.com" style="width: 100%; padding: 0.8rem; border: 1px solid var(--color-border); border-radius: var(--radius-xs); margin-top: 4px;">
+        </div>
+        <div>
+          <label style="font-size: 0.8rem; font-weight: 600; text-transform: uppercase;">Password</label>
+          <input type="password" required placeholder="••••••••" style="width: 100%; padding: 0.8rem; border: 1px solid var(--color-border); border-radius: var(--radius-xs); margin-top: 4px;">
+        </div>
+        <button type="submit" class="btn btn-primary btn-full" style="margin-top: 0.5rem;">Sign In</button>
+      </form>
+
+      <div style="margin-top: 1.2rem; padding-top: 1rem; border-top: 1px solid var(--color-border-subtle); font-size: 0.75rem; color: var(--color-muted); text-align: center;">
+        *Frontend prototype demo. Secure logins and customer data require backend session validation.
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/wishlist.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/app.js"></script>
+
+  <!-- Homepage specific initialization script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // 1. Render Featured Products on Home
+      const featuredGrid = document.getElementById("home-featured-grid");
+      const bestsellersGrid = document.getElementById("home-bestsellers-grid");
+
+      function renderFeaturedByCat(category = "all") {
+        if (!featuredGrid || typeof NovaraCatalog === "undefined") return;
+        let prods = category === "all" ? NovaraCatalog.getFeatured(8) : NovaraCatalog.getByCategory(category).slice(0, 8);
+        featuredGrid.innerHTML = prods.map(p => NovaraApp.createProductCardHTML(p)).join("");
+      }
+
+      renderFeaturedByCat("all");
+
+      // Category tab click binding
+      const catTabs = document.querySelectorAll("#home-category-tabs .category-filter-btn");
+      catTabs.forEach(tab => {
+        tab.addEventListener("click", function () {
+          catTabs.forEach(t => {
+            t.classList.remove("is-active");
+            t.setAttribute("aria-selected", "false");
+          });
+          this.classList.add("is-active");
+          this.setAttribute("aria-selected", "true");
+          const cat = this.getAttribute("data-cat");
+          renderFeaturedByCat(cat);
+        });
+      });
+
+      // 2. Render Bestsellers on Home
+      if (bestsellersGrid && typeof NovaraCatalog !== "undefined") {
+        const bestsellers = NovaraCatalog.getBestsellers(4);
+        bestsellersGrid.innerHTML = bestsellers.map(p => NovaraApp.createProductCardHTML(p)).join("");
+      }
+
+      // 3. Account Modal wiring
+      const accountBtn = document.getElementById("account-btn");
+      const accountModal = document.getElementById("account-modal");
+      const accountClose = document.getElementById("account-modal-close");
+
+      if (accountBtn && accountModal) {
+        accountBtn.addEventListener("click", () => {
+          accountModal.classList.add("is-active");
+        });
+      }
+      if (accountClose && accountModal) {
+        accountClose.addEventListener("click", () => {
+          accountModal.classList.remove("is-active");
+        });
+      }
+      if (accountModal) {
+        accountModal.addEventListener("click", (e) => {
+          if (e.target === accountModal) {
+            accountModal.classList.remove("is-active");
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>

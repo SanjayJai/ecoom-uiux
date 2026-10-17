@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>The Catalog — NOVARA Luxury Lifestyle</title>
+  <meta name="description" content="Explore the complete collection of NOVARA garments, tailoring, silk shirts, and Italian leather accessories.">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◈</text></svg>">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <aside class="announcement-bar" role="region" aria-label="Store Announcements">
+    <div class="container">
+      <div class="announcement-track">
+        <span class="announcement-item">
+          Complimentary express shipping across India on orders over <strong>₹1,999</strong>
+        </span>
+      </div>
+      <button class="announcement-close" aria-label="Close Announcement Bar">&times;</button>
+    </div>
+  </aside>
+
+  <!-- Navigation Header -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <a href="index.html" class="site-logo">
+        <span class="logo-text">NOVARA<span class="logo-dot"></span></span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="shop.html" class="nav-link is-active">Shop</a>
+        <a href="shop.html?category=new-arrivals" class="nav-link">New Arrivals <span class="nav-tag-badge">NEW</span></a>
+        <a href="shop.html?category=bestsellers" class="nav-link">Collections</a>
+        <a href="about.html" class="nav-link">About</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="action-btn search-trigger-btn" aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+          </svg>
+        </button>
+
+        <a href="wishlist.html" class="action-btn" aria-label="Wishlist">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+          </svg>
+          <span class="badge-count wishlist-count-badge">0</span>
+        </a>
+
+        <button class="action-btn cart-trigger-btn" aria-label="Shopping Bag">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="badge-count cart-count-badge">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+        <ol class="breadcrumb-list">
+          <li><a href="index.html">Home</a></li>
+          <li class="breadcrumb-separator">/</li>
+          <li class="breadcrumb-current" id="shop-breadcrumb-title">All Collections</li>
+        </ol>
+      </nav>
+
+      <!-- Shop Title & Subtitle -->
+      <div style="margin-bottom: 2rem;">
+        <span class="section-eyebrow" id="shop-eyebrow">The Complete Collection</span>
+        <h1 class="heading-editorial" id="shop-page-title" style="margin-top: 0.3rem;">All Creations</h1>
+        <p class="lead" style="margin-top: 0.4rem; max-width: 680px;">
+          Explore elevated pieces crafted from Italian merino wool, pure Grade-6A Mulberry silk, and Tuscan vegetable-tanned leather.
+        </p>
+      </div>
+
+      <!-- Shop Filter & Toolbar Controls -->
+      <div class="shop-toolbar" id="shop-toolbar">
+        <!-- Category Filter Pills -->
+        <div class="shop-categories-nav" id="category-pills">
+          <button class="category-filter-btn is-active" data-cat="all">All</button>
+          <button class="category-filter-btn" data-cat="men">Men</button>
+          <button class="category-filter-btn" data-cat="women">Women</button>
+          <button class="category-filter-btn" data-cat="accessories">Accessories</button>
+          <button class="category-filter-btn" data-cat="new-arrivals">New Arrivals</button>
+          <button class="category-filter-btn" data-cat="bestsellers">Bestsellers</button>
+        </div>
+
+        <!-- Filter and Sort Controls -->
+        <div class="shop-filter-controls">
+          <!-- Live Shop Filter Search -->
+          <div style="position: relative; min-width: 190px;">
+            <input
+              type="text"
+              id="shop-search-input"
+              placeholder="Search in store..."
+              style="width: 100%; padding: 0.55rem 0.8rem 0.55rem 2rem; border: 1px solid var(--color-border); border-radius: var(--radius-sm); font-size: 0.82rem; background: #fff;"
+            >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="position: absolute; left: 8px; top: 50%; transform: translateY(-50%); color: var(--color-muted);">
+              <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+            </svg>
+          </div>
+
+          <!-- Price Filter Dropdown -->
+          <div class="custom-select-wrapper">
+            <select class="custom-select" id="price-filter-select" aria-label="Filter by price">
+              <option value="all">All Prices</option>
+              <option value="under-5000">Under ₹5,000</option>
+              <option value="5000-8000">₹5,000 – ₹8,000</option>
+              <option value="above-8000">Above ₹8,000</option>
+            </select>
+            <svg class="custom-select-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="m6 9 6 6 6-6"/>
+            </svg>
+          </div>
+
+          <!-- Sort Select -->
+          <div class="custom-select-wrapper">
+            <select class="custom-select" id="sort-select" aria-label="Sort products">
+              <option value="featured">Sort: Featured</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="rating">Highest Rated</option>
+              <option value="newest">Newest First</option>
+            </select>
+            <svg class="custom-select-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="m6 9 6 6 6-6"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Active Filter Bar & Results Count -->
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; font-size: 0.85rem; color: var(--color-mid-gray);">
+        <span id="shop-items-count">Showing 12 of 12 pieces</span>
+        <button id="reset-filters-btn" style="color: var(--color-accent-dark); font-weight: 600; text-decoration: underline; cursor: pointer; display: none;">
+          Clear Filters
+        </button>
+      </div>
+
+      <!-- Product Grid -->
+      <div class="product-grid" id="shop-catalog-grid" style="margin-bottom: 5rem;">
+        <!-- Injected dynamically -->
+      </div>
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">NOVARA</a>
+          <p>An independent atelier creating elevated lifestyle essentials through purposeful tailoring and noble natural fibers.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Collections</h5>
+          <ul class="footer-links">
+            <li><a href="shop.html?category=men">Men's Apparel</a></li>
+            <li><a href="shop.html?category=women">Women's Apparel</a></li>
+            <li><a href="shop.html?category=accessories">Leather &amp; Accessories</a></li>
+            <li><a href="shop.html?category=new-arrivals">New Arrivals</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Client Support</h5>
+          <ul class="footer-links">
+            <li><a href="cart.html">Track Order</a></li>
+            <li><a href="about.html#shipping">Shipping &amp; Delivery</a></li>
+            <li><a href="about.html#returns">Complimentary Returns</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>The Atelier</h5>
+          <ul class="footer-links">
+            <li><a href="about.html">Design Philosophy</a></li>
+            <li><a href="about.html#flagship">Flagship Locations</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Flagship Studio</h5>
+          <p style="color: #9c978f; font-size: 0.85rem; line-height: 1.6;">
+            14 Kala Ghoda Arts Quarter, Fort,<br>Mumbai, Maharashtra 400001
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 NOVARA Lifestyle Pvt. Ltd. All rights reserved.</p>
+        <button class="back-to-top-btn" aria-label="Scroll back to top">
+          Back to Top ↑
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Drawers & Modals -->
+  <div class="drawer-backdrop" id="cart-backdrop" aria-hidden="true"></div>
+  <aside class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-label="Shopping Bag">
+    <div class="cart-drawer-header">
+      <div class="cart-drawer-title">
+        <span>Shopping Bag</span>
+        <span class="cart-drawer-count" id="cart-drawer-count">(0 items)</span>
+      </div>
+      <button class="close-drawer-btn cart-drawer-close" aria-label="Close">&times;</button>
+    </div>
+    <div class="free-shipping-container">
+      <div class="free-shipping-text" id="free-shipping-text">Add items for free express courier</div>
+      <div class="progress-bar-bg"><div class="progress-bar-fill" id="free-shipping-fill"></div></div>
+    </div>
+    <div class="cart-drawer-body" id="cart-drawer-items"></div>
+    <div class="cart-drawer-footer">
+      <div class="cart-summary-row"><span>Subtotal</span><span id="cart-drawer-subtotal">₹0</span></div>
+      <div class="cart-summary-row total-row"><span>Estimated Total</span><span id="cart-drawer-total">₹0</span></div>
+      <div class="cart-footer-links">
+        <a href="cart.html" class="btn btn-primary btn-full" id="cart-drawer-checkout-btn">View Bag &amp; Checkout</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Search Overlay -->
+  <div class="drawer-backdrop" id="search-backdrop" aria-hidden="true"></div>
+  <div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true">
+    <div class="container search-container">
+      <div class="search-input-wrapper">
+        <input type="text" id="search-input" class="search-input" placeholder="Search the collection...">
+        <button class="search-clear-btn" id="search-clear">&times;</button>
+        <button class="search-close-btn" id="search-close">&times;</button>
+      </div>
+      <div class="search-meta">
+        <div id="search-results-count"></div>
+        <div class="search-results-list" id="search-results"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Nav Drawer -->
+  <div class="drawer-backdrop" id="mobile-nav-backdrop" aria-hidden="true"></div>
+  <aside class="mobile-nav-drawer" id="mobile-nav-drawer">
+    <div class="mobile-nav-header">
+      <span class="logo-text">NOVARA<span class="logo-dot"></span></span>
+      <button class="close-drawer-btn mobile-nav-close">&times;</button>
+    </div>
+    <div class="mobile-nav-body">
+      <div class="mobile-nav-links">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+        <a href="shop.html" class="mobile-nav-link">Shop</a>
+        <a href="shop.html?category=new-arrivals" class="mobile-nav-link">New Arrivals</a>
+        <a href="wishlist.html" class="mobile-nav-link">Wishlist</a>
+        <a href="cart.html" class="mobile-nav-link">Shopping Bag</a>
+        <a href="about.html" class="mobile-nav-link">About</a>
+      </div>
+    </div>
+  </aside>
+
+  <div class="toast-container" aria-live="polite"></div>
+
+  <!-- Core Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/wishlist.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/app.js"></script>
+
+  <!-- Shop Filtering & Sorting Controller -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const grid = document.getElementById("shop-catalog-grid");
+      const countEl = document.getElementById("shop-items-count");
+      const resetBtn = document.getElementById("reset-filters-btn");
+      const searchInput = document.getElementById("shop-search-input");
+      const priceSelect = document.getElementById("price-filter-select");
+      const sortSelect = document.getElementById("sort-select");
+      const catPills = document.querySelectorAll("#category-pills .category-filter-btn");
+
+      // Filter state
+      let activeCategory = "all";
+      let activePriceRange = "all";
+      let activeSearch = "";
+      let activeSort = "featured";
+
+      // Read initial query parameter (e.g. ?category=women)
+      const urlParams = new URLSearchParams(window.location.search);
+      const initialCat = urlParams.get("category");
+      if (initialCat) {
+        activeCategory = initialCat;
+        catPills.forEach(pill => {
+          if (pill.getAttribute("data-cat") === initialCat) {
+            pill.classList.add("is-active");
+          } else {
+            pill.classList.remove("is-active");
+          }
+        });
+      }
+
+      function filterAndRender() {
+        if (!grid || typeof PRODUCTS_DATA === "undefined") return;
+
+        let results = [...PRODUCTS_DATA];
+
+        // 1. Category Filter
+        if (activeCategory !== "all") {
+          results = results.filter(p => p.category === activeCategory || p.tags.includes(activeCategory));
+        }
+
+        // 2. Price Filter
+        if (activePriceRange === "under-5000") {
+          results = results.filter(p => p.price < 5000);
+        } else if (activePriceRange === "5000-8000") {
+          results = results.filter(p => p.price >= 5000 && p.price <= 8000);
+        } else if (activePriceRange === "above-8000") {
+          results = results.filter(p => p.price > 8000);
+        }
+
+        // 3. Search text
+        if (activeSearch) {
+          const s = activeSearch.toLowerCase();
+          results = results.filter(p =>
+            p.name.toLowerCase().includes(s) ||
+            p.category.toLowerCase().includes(s) ||
+            p.description.toLowerCase().includes(s)
+          );
+        }
+
+        // 4. Sorting
+        if (activeSort === "price-asc") {
+          results.sort((a, b) => a.price - b.price);
+        } else if (activeSort === "price-desc") {
+          results.sort((a, b) => b.price - a.price);
+        } else if (activeSort === "rating") {
+          results.sort((a, b) => b.rating - a.rating);
+        } else if (activeSort === "newest") {
+          results.sort((a, b) => (b.badge === "New" || b.badge === "New Arrival" ? 1 : 0) - (a.badge === "New" || a.badge === "New Arrival" ? 1 : 0));
+        }
+
+        // Render count
+        if (countEl) {
+          countEl.textContent = `Showing ${results.length} of ${PRODUCTS_DATA.length} pieces`;
+        }
+
+        // Toggle clear filters button visibility
+        const isFiltered = activeCategory !== "all" || activePriceRange !== "all" || activeSearch !== "";
+        if (resetBtn) {
+          resetBtn.style.display = isFiltered ? "inline-block" : "none";
+        }
+
+        // Empty state handling
+        if (results.length === 0) {
+          grid.innerHTML = `
+            <div class="empty-state" style="grid-column: 1 / -1;">
+              <div class="empty-state-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+                </svg>
+              </div>
+              <h3 class="empty-state-title">No matching pieces found</h3>
+              <p class="empty-state-text">There are no items matching your current filter criteria. Try adjusting your selections or view our entire collection.</p>
+              <button class="btn btn-primary btn-sm" id="empty-reset-btn">Reset All Filters</button>
+            </div>
+          `;
+          const emptyReset = document.getElementById("empty-reset-btn");
+          if (emptyReset) emptyReset.addEventListener("click", resetAllFilters);
+          return;
+        }
+
+        // Render Cards
+        grid.innerHTML = results.map(p => NovaraApp.createProductCardHTML(p)).join("");
+      }
+
+      function resetAllFilters() {
+        activeCategory = "all";
+        activePriceRange = "all";
+        activeSearch = "";
+        activeSort = "featured";
+
+        catPills.forEach(p => {
+          if (p.getAttribute("data-cat") === "all") p.classList.add("is-active");
+          else p.classList.remove("is-active");
+        });
+
+        if (priceSelect) priceSelect.value = "all";
+        if (sortSelect) sortSelect.value = "featured";
+        if (searchInput) searchInput.value = "";
+
+        filterAndRender();
+      }
+
+      // Bind Category Pills
+      catPills.forEach(pill => {
+        pill.addEventListener("click", function () {
+          catPills.forEach(p => p.classList.remove("is-active"));
+          this.classList.add("is-active");
+          activeCategory = this.getAttribute("data-cat");
+          filterAndRender();
+        });
+      });
+
+      // Bind Price Select
+      if (priceSelect) {
+        priceSelect.addEventListener("change", function () {
+          activePriceRange = this.value;
+          filterAndRender();
+        });
+      }
+
+      // Bind Sort Select
+      if (sortSelect) {
+        sortSelect.addEventListener("change", function () {
+          activeSort = this.value;
+          filterAndRender();
+        });
+      }
+
+      // Bind Search with debounce
+      if (searchInput) {
+        let timer = null;
+        searchInput.addEventListener("input", function (e) {
+          clearTimeout(timer);
+          timer = setTimeout(() => {
+            activeSearch = e.target.value.trim();
+            filterAndRender();
+          }, 200);
+        });
+      }
+
+      // Reset button
+      if (resetBtn) {
+        resetBtn.addEventListener("click", resetAllFilters);
+      }
+
+      // Initial run
+      filterAndRender();
+    });
+  </script>
+</body>
+</html>
